@@ -1,0 +1,90 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Environment variables
+.env
+*.env.*
+
+# Virtual environments
+.venv/
+env/
+ENV/
+venv/
+
+# Flask instance folder
+backend/instance/
+
+# SQLite database
+*.db
+*.sqlite3
+
+# Flask log files
+*.log
+
+# PyCharm files
+.idea/
+
+# Docker-related files
+docker-compose.override.yml
+Dockerfile*
+
+# Node.js dependencies
+frontend/node_modules/
+frontend/build/
+
+# Yarn and npm
+frontend/yarn-error.log
+frontend/yarn.lock
+frontend/package-lock.json
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+*.wheel
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage files
+.coverage
+*.cover
+*.coverage.*
+
+# Test artifacts
+.tox/
+.nox/
+.pytest_cache/
+test-results/
+junit-report.xml
+coverage.xml
+
+# Linting artifacts
+*.lint
+pylint-report.txt
+
+# Logs
+*.log
+*.out
+*.err
+logs/
+
+# VSCode settings
+.vscode/
+
+# Backup files
+*.bak
+*.swp
+*.swo
+*.tmp
+*.temp

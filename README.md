@@ -6,7 +6,6 @@ Este es un backend básico desarrollado con Flask que incluye funcionalidad de r
 
 Antes de iniciar, asegúrate de tener instalados los siguientes requerimientos:
 
-- **Python 3.8+**
 - **Docker** y **Docker Compose**
 - Opcional: Un entorno virtual (`venv`) para gestionar dependencias locales
 
@@ -15,40 +14,28 @@ Antes de iniciar, asegúrate de tener instalados los siguientes requerimientos:
 1. Clona este repositorio:
 
     ```bash
-    git clone https://github.com/tu_usuario/bnka_backend.git
+    git clone https://github.com/jesusrafael9/bnka_backend.git
     cd bnka_backend
     ```
 
-2. Crea un archivo `.env` en la raíz del proyecto con las variables de entorno necesarias. Por ejemplo:
+2. Con Docker, sigue directamente al siguiente apartado.
 
-    ```
-    FLASK_APP=app.py
-    FLASK_ENV=development
-    ```
-
-3. Si decides trabajar localmente sin Docker, instala las dependencias usando `pip`:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Si decides trabajar con Docker, sigue directamente al siguiente apartado.
-
-## Levantar el proyecto con Docker
-
-1. Construye el contenedor Docker con el siguiente comando:
-
-    ```bash
-    docker build -t bnka_backend .
-    ```
-
-2. Ejecuta el contenedor usando Docker Compose:
+Ejecuta el contenedor usando Docker Compose:
 
     ```bash
     docker-compose up --build
     ```
 
-3. El servidor estará corriendo en [http://localhost:5000](http://localhost:5000).
+3. El backend estará corriendo en [http://localhost:5001](http://localhost:5001).
+
+4. El frontend [http://localhost:3000] (http://localhost:3000)
+
+5. Para detener el servidor, presiona `Ctrl + C` y luego ejecuta:
+
+    ```bash
+    docker-compose down
+    ```
+   
 
 ## Endpoints disponibles
 
@@ -61,5 +48,5 @@ Antes de iniciar, asegúrate de tener instalados los siguientes requerimientos:
 
 La documentación interactiva Swagger está disponible en:
 
-[http://localhost:5000/apidocs](http://localhost:5000/apidocs)
+[http://localhost:5000/apidocs](http://localhost:5001/apidocs)
 

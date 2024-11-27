@@ -28,7 +28,7 @@ Ejecuta el contenedor usando Docker Compose:
 
 3. El backend estará corriendo en [http://localhost:5001](http://localhost:5001).
 
-4. El frontend [http://localhost:3000] (http://localhost:3000)
+4. El frontend [http://localhost:3000](http://localhost:3000)
 
 5. Para detener el servidor, presiona `Ctrl + C` y luego ejecuta:
 

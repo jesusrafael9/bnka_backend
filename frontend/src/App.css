@@ -1,38 +1,98 @@
-.App {
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
   text-align: center;
+  color: #007bff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* App Container */
+div {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form Styles */
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px; /* Espacio entre elementos */
+  margin-bottom: 20px;
+}
+
+form input, form select, form button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+form button {
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Specific Fix for Inline Forms */
+form.inline {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 10px; /* Espacio entre elementos del formulario */
+}
+
+form.inline input {
+  flex: 1; /* Permite que el input ocupe el espacio necesario */
+}
+
+form.inline p {
+  margin: 0;
+  font-size: 14px;
+  color: red;
+  white-space: nowrap; /* Evita que el texto de error o balance se desborde */
+}
+
+/* Error and Success Messages */
+p.error {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0 0; /* Espaciado adecuado */
+}
+
+p.success {
+  color: green;
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #f1f1f1;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
 }

@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flasgger import Swagger
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -128,6 +130,14 @@ def transaction():
         description: Usuario no encontrado
     """
     data = request.get_json()
+
+    # Convertir 'amount' a float
+    try:
+        data['amount'] = float(data['amount'])
+    except ValueError:
+        return jsonify({"error": "El campo 'amount' debe ser un número válido"}), 400
+
+    # Validar campos obligatorios
     if not all(key in data for key in ['user_id', 'type', 'amount']):
         return jsonify({"error": "Faltan datos"}), 400
 
